@@ -23,6 +23,7 @@ import com.learningcurve.clickitcameraapp.presentation.ui.home.HomeScreen
 import com.learningcurve.clickitcameraapp.util.uriFromEncodedString
 import java.io.File
 
+@ExperimentalCoilApi
 @ExperimentalMaterialApi
 @ExperimentalPermissionsApi
 @ExperimentalAnimationApi

@@ -3,27 +3,21 @@ package com.learningcurve.clickitcameraapp.presentation.ui.edit
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
-import android.util.Log
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.ScaffoldState
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.learningcurve.clickitcameraapp.presentation.repository.EditImageRepository
 import com.learningcurve.clickitcameraapp.presentation.util.saveImageToInternalStorage
 import com.learningcurve.clickitcameraapp.util.SnackbarController
-import com.learningcurve.clickitcameraapp.util.TAG
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class EditImageViewModel
 @Inject
-constructor(
-    private val editImageRepository: EditImageRepository
-):ViewModel() {
+constructor():ViewModel() {
 
     private val _imageBitmap: MutableState<Bitmap?> = mutableStateOf(null)
     val imageBitmap: State<Bitmap?> = _imageBitmap

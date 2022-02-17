@@ -28,7 +28,7 @@ fun CapturePictureButton(
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
-    val color = if (isPressed) Color.Blue else Color.Black
+    val color = if (isPressed) Color.Gray else Color.Black
     val contentPadding = PaddingValues(if (isPressed) 8.dp else 12.dp)
     OutlinedButton(
         modifier = modifier,
